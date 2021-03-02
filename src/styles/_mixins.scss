@@ -1,0 +1,12 @@
+@mixin bg($bgUrl) {
+  height: 160vw;
+  width: 100vw;
+  background-image: url($bgUrl);
+  background-size: 100vw 160vw;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+@mixin simple-transition($x, $y, $scale) {
+  transform: translate($x, $y) scale($scale);
+}

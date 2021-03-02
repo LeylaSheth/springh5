@@ -1,0 +1,77 @@
+.bg6 {
+  height: 160vw;
+  width: 100vw;
+  background-image: url('../../assets/imgs/bg6.jpg');
+  background-size: 100vw 160vw;
+  background-repeat: no-repeat;
+  position: absolute;
+  .nsignin {
+    display: block;
+    font-size: 5vw;
+    width: 22vw;
+    height: 9vw;
+    background-image: url('../../assets/imgs/signin.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -1vw;
+    right: 0;
+    padding-top: 2.5vw;
+    padding-left: 1vw;
+    text-decoration: none;
+    color: #000;
+  }
+  .say {
+    color: #630000;
+    top: 10vh;
+    position: absolute;
+    font-size: 7.6vw;
+    transform: rotate(-10deg);
+    animation: saysth 700ms ease-in forwards;
+  }
+  .laba {
+    position: absolute;
+    width: 30vw;
+    right: 15vw;
+    top: 15vh;
+    animation: say 0.5s linear infinite;
+  }
+  .ui2 {
+    position: absolute;
+    transform: scale(0);
+    left: 25vw;
+    bottom: 23vh;
+    width: 25vw;
+  }
+}
+
+@keyframes saysth {
+  0% {
+    opacity: 0;
+    transform: translate(20vw, 10vh) scale(0) rotate(-10deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translate(10vw, 5vh) scale(0.5) rotate(-10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(-10deg);
+  }
+}
+
+@keyframes uishow1 {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.2);
+  }
+  30%,
+  70% {
+    opacity: 0.8;
+    transform: translate(10vw, -50vw) skew(20deg, -20deg) rotate(45deg) scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(90vw, -50vw) skew(20deg, -20deg) rotate(45deg) scale(1.5);
+  }
+}

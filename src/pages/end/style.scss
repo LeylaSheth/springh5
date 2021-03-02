@@ -1,0 +1,71 @@
+.bg15 {
+  height: 160vh;
+  width: 100vw;
+  background-color: rgb(248, 231, 209);
+  background-size: 100vw 160vh;
+  background-repeat: no-repeat;
+  position: absolute;
+  .nsignin {
+    display: block;
+    font-size: 5vw;
+    width: 22vw;
+    height: 9vw;
+    background-image: url('../../assets/imgs/signin.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -1vw;
+    right: 0;
+    padding-top: 2.5vw;
+    padding-left: 1vw;
+    text-decoration: none;
+    color: #000;
+  }
+  h2 {
+    width: 100vw;
+    text-align: center;
+    margin-top: 0;
+  }
+  .bingyan {
+    position: relative;
+    width: 30vw;
+    left: 35vw;
+  }
+  .wen {
+    width: 100vw;
+    text-align: center;
+    color: #630000;
+    font-size: 5.5vw;
+  }
+  .signin {
+    display: block;
+    font-size: 5vw;
+    width: 30vw;
+    height: 10vw;
+    background-image: url('../../assets/imgs/signinf.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 0vh;
+    left: 38vw;
+    padding-top: 11vw;
+    padding-left: 2vw;
+    text-decoration: none;
+    color: #000;
+    animation: say 1s ease-in-out infinite;
+    // div {
+    //   margin-top: 6vh;
+    //   margin-bottom: 2vh;
+    //   margin-left: 2vw;
+    // }
+  }
+  .tuiwen {
+    font-size: 5vw;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    top: 1vh;
+    left: 30vw;
+    text-align: center;
+  }
+}

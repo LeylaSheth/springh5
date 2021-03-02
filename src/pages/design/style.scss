@@ -1,0 +1,176 @@
+.bg4 {
+  height: 160vw;
+  width: 100vw;
+  background-image: url('../../assets/imgs/bg4.jpg');
+  background-size: 100vw 160vw;
+  background-repeat: no-repeat;
+  position: absolute;
+  .nsignin {
+    display: block;
+    font-size: 5vw;
+    width: 22vw;
+    height: 9vw;
+    background-image: url('../../assets/imgs/signin.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -1vw;
+    right: 0;
+    padding-top: 2.5vw;
+    padding-left: 1vw;
+    text-decoration: none;
+    color: #000;
+  }
+  .soft {
+    position: absolute;
+    transform: translate(40vw, 4vh) scale(0);
+    width: 20vw;
+  }
+  .idea {
+    width: 15vw;
+    height: 25vw;
+    position: absolute;
+    background-image: url('../../assets/imgs/idea.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .yuan {
+    width: 25vw;
+    transform: translate(75vw, 15vh) scale(0);
+    position: absolute;
+  }
+  .turn1 {
+    width: 10vw;
+    opacity: 0;
+    transform: translate(25vw, 10vh) rotate(-20deg);
+  }
+  .turn2 {
+    width: 10vw;
+    opacity: 0;
+    transform: translate(60vw, 10vh) rotate(30deg);
+  }
+  .ui1 {
+    position: absolute;
+    opacity: 0;
+    transform: scale(0);
+    left: 30vw;
+    bottom: 25vw;
+    width: 25vw;
+  }
+}
+
+@keyframes fly3 {
+  0% {
+    transform: translate(-30vw, 15vh);
+  }
+  25%,
+  50%,
+  75% {
+    transform: translate(15vw, 25vh) scale(0.8);
+  }
+  100% {
+    transform: translate(8vw, 10vh) scale(1);
+  }
+}
+
+@keyframes fly4 {
+  0% {
+    transform: translate(2vw, 10vh) scale(1);
+  }
+  50% {
+    transform: translate(15vw, 9vh) scale(0.7);
+  }
+  100% {
+    transform: translate(35vw, 5vh) scale(0);
+  }
+}
+
+@keyframes softenter {
+  0% {
+    opacity: 0;
+    transform: translate(34vw, 68vh) scale(0);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translate(37vw, 30vh) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(40vw, 4vh) scale(1);
+  }
+}
+
+@keyframes softleave {
+  0% {
+    transform: translate(40vw, 4vh) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(40vw, 4vh) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes yuanenter {
+  0% {
+    opacity: 0;
+    transform: translate(35vw, 6vh) scale(0);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translate(60vw, 8vh) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(75vw, 15vh) scale(1);
+  }
+}
+
+@keyframes yuanleave {
+  0% {
+    opacity: 1;
+    transform: translate(75vw, 15vh) scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translate(60vw, 40vh) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(35vw, 70vh) scale(0);
+  }
+}
+
+@keyframes turnenter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes turnexit {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes uishow {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.2);
+  }
+  30%,
+  70% {
+    opacity: 0.8;
+    transform: translate(10vw, -100vw) skew(20deg, -20deg) rotate(45deg) scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(120vw, -100vw) scale(1);
+  }
+}

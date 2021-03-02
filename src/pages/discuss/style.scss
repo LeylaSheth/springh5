@@ -1,0 +1,170 @@
+.bg2 {
+  height: 160vw;
+  width: 100vw;
+  background-size: 100vw 160vw;
+  background-repeat: no-repeat;
+  position: absolute;
+  .nsignin {
+    display: block;
+    font-size: 5vw;
+    width: 22vw;
+    height: 9vw;
+    background-image: url('../../assets/imgs/signin.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -1vw;
+    right: 0vw;
+    padding-top: 2.5vw;
+    padding-left: 1vw;
+    text-decoration: none;
+    color: #000;
+  }
+  .say {
+    position: absolute;
+    top: 45vw;
+    left: 13vw;
+    width: 70vw;
+    height: 80vw;
+    animation: say 0.2s linear infinite;
+  }
+  .tie {
+    position: absolute;
+    top: 7vw;
+    left: 33vw;
+    width: 30vw;
+    height: 30vw;
+    background-image: url('../../assets/imgs/tie.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .letter {
+    text-align: center;
+    position: absolute;
+    bottom: -10vw;
+    width: 100vw;
+    height: 20vw;
+    color: white;
+    font-size: 5.5vw;
+    line-height: 10vw;
+  }
+  .idea {
+    width: 20vw;
+    height: 30vw;
+    position: absolute;
+    background-image: url('../../assets/imgs/idea.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    animation: fly 2s ease-in forwards;
+  }
+  .idea1 {
+    transition: all ease-in 1s;
+    width: 20vw;
+    height: 30vw;
+    top: 10vw;
+    right: 10vw;
+    position: absolute;
+    background-image: url('../../assets/imgs/idea.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+@keyframes say {
+  0% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translate(-30vw, 30vw) scale(1);
+  }
+  25%,
+  50%,
+  75% {
+    transform: translate(20vw, 25vw) scale(0.7);
+  }
+  100% {
+    transform: translate(13vw, 10vw) scale(1);
+  }
+}
+
+.letter-enter {
+  opacity: 0;
+  transform: translateY(15vw);
+}
+
+.letter-enter-active {
+  opacity: 0.7;
+  transform: translateY(0vw);
+  transition: all 500ms linear;
+}
+
+.letter-enter-done {
+  opacity: 1;
+  transform: translateY(-20vw);
+  transition: all 500ms linear;
+}
+
+.letter-exit {
+  opacity: 1;
+  transform: translateY(3vw);
+  transition: all 500ms linear;
+}
+
+.letter-exit-active {
+  opacity: 0.5;
+  transform: translateY(3vh);
+}
+
+.letter-exit-done {
+  transform: scale(0);
+}
+
+.tie-enter {
+  opacity: 0;
+  transform: scale(1.5);
+}
+
+.tie-enter-active {
+  opacity: 0.5;
+  transform: scale(1.25);
+  transition: all 150ms linear;
+}
+
+.tie-enter-done {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 150ms linear;
+}
+
+// .ideas-enter {
+//   opacity: 0;
+//   transform: translate(0, 0) scale(0.6);
+// }
+// .ideas-enter-active {
+//   opacity: 0.5;
+//   transform: translate(-10vw, 0) scale(0.6);
+//   transition: all 500ms linear;
+// }
+// .ideas-enter-done {
+//   opacity: 1;
+//   transform: translate(-55vw, 0) scale(1);
+//   transition: all 500ms linear;
+// }
+// .ideas-exit {
+//   opacity: 1;
+//   transform: translate(-55vw, 0) scale(1);
+//   transition: all 500ms linear;
+// }
+// .ideas-exit-active {
+//   opacity: 0.5;
+//   transform: translate(100vw, 0) scale(1);
+// }
+// .ideas-exit-done {
+//   transform: scale(0);
+// }

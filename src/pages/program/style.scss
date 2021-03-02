@@ -1,0 +1,229 @@
+.bg9 {
+  color: #630000;
+  height: 160vw;
+  width: 100vw;
+  background-image: url('../../assets/imgs/bg9.png');
+  background-size: 100vw 160vw;
+  background-repeat: no-repeat;
+  position: absolute;
+  .nsignin {
+    display: block;
+    font-size: 5vw;
+    width: 22vw;
+    height: 9vw;
+    background-image: url('../../assets/imgs/signin.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -1vw;
+    right: 0;
+    padding-top: 2.5vw;
+    padding-left: 1vw;
+    text-decoration: none;
+    color: #000;
+  }
+  .by {
+    font-size: 7vw;
+    position: absolute;
+    top: 5vw;
+    left: 5vw;
+  }
+  .xuqiu {
+    font-size: 6vw;
+    position: absolute;
+  }
+  .xian {
+    width: 5vw;
+    position: absolute;
+  }
+  .ans {
+    font-size: 7vw;
+    position: absolute;
+  }
+  .logo {
+    opacity: 0;
+    transform: translate(50vw, 25vh) scale(0);
+    position: absolute;
+    width: 20vw;
+  }
+}
+
+@keyframes logo {
+  0% {
+    opacity: 0;
+    transform: translate(50vw, 25vh) scale(0);
+  }
+  30%,
+  70% {
+    opacity: 0.8;
+    transform: translate(20vw, 1vh) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(100vw, 1vh) scale(1);
+  }
+}
+
+.xian-enter {
+  opacity: 0;
+  transform: translate(20vw, 35vw) scale(0);
+}
+
+.xian-enter-active {
+  opacity: 0.5;
+  transform: translate(22.5vw, 30vw) scale(0.5);
+  transition: all 500ms ease-in;
+}
+
+.xian-enter-done {
+  opacity: 1;
+  transform: translate(25vw, 25vw) scale(1);
+  transition: all 500ms ease-in;
+}
+
+.xian-exit {
+  opacity: 1;
+  transform: translate(25vw, 25vw) scale(1);
+}
+
+.xian-exit-active {
+  opacity: 0.5;
+  transition: all 500ms ease-in;
+}
+
+.xian-exit-done {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.by-enter {
+  opacity: 0.01;
+  transform: scale(0);
+}
+
+.by-enter-active {
+  opacity: 0.5;
+  transform: scale(1.5);
+  transition: all 500ms linear;
+}
+
+.by-enter-done {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 500ms linear;
+}
+
+.by-exit {
+  transform: scale(1);
+}
+
+.by-exit-active {
+  opacity: 0.5;
+  transition: all 500ms ease-in;
+}
+
+.by-exit-done {
+  opacity: 0;
+  transform: scale(0);
+}
+
+//fenge
+.xuqiu2-enter {
+  opacity: 0.01;
+  transform: translate(0, 15vw) scale(0);
+}
+
+.xuqiu2-enter-active {
+  opacity: 0.5;
+  transform: translate(13vw, 5vw) scale(1.3);
+  transition: all 500ms linear;
+}
+
+.xuqiu2-enter-done {
+  opacity: 1;
+  transform: translate(26vw, 10vw) scale(1);
+  transition: all 500ms linear;
+}
+
+.xuqiu2-exit {
+  opacity: 0.1;
+  transform: translate(26vw, 6vw) scale(1);
+  transform: scale(1);
+}
+
+.xuqiu2-exit-active {
+  opacity: 0;
+  transform: scale(1);
+  transition: all 500ms ease-in;
+}
+
+.xuqiu2-exit-done {
+  opacity: 0;
+  transform: scale(0);
+}
+
+//
+.ans-enter {
+  opacity: 0.01;
+  transform: translate(50vw, 20vw) scale(0);
+}
+
+.ans-enter-active {
+  opacity: 0.5;
+  transform: translate(30vw, 5vw) scale(1.3);
+  transition: all 500ms linear;
+}
+
+.ans-enter-done {
+  opacity: 1;
+  transform: translate(40vw, 15vw) scale(1);
+  transition: all 500ms linear;
+}
+
+.ans-exit {
+  opacity: 1;
+  transform: translate(40vw, 15vw) scale(1);
+  transform: scale(1);
+}
+
+.ans-exit-active {
+  opacity: 0.5;
+  transition: all 500ms ease-in;
+}
+
+.ans-exit-done {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.xian1-enter {
+  opacity: 0;
+  transform: translate(70vw, 40vw) scale(0) rotate(90deg);
+}
+
+.xian1-enter-active {
+  opacity: 0.5;
+  transform: translate(72.5vw, 36vw) scale(0.5) rotate(90deg);
+  transition: all 500ms ease-in;
+}
+
+.xian1-enter-done {
+  opacity: 1;
+  transform: translate(70vw, 28vw) scale(1) rotate(90deg);
+  transition: all 500ms ease-in;
+}
+
+.xian1-exit {
+  opacity: 1;
+  transform: translate(70vw, 28vw) scale(1);
+}
+
+.xian1-exit-active {
+  opacity: 0.5;
+  transition: all 500ms ease-in;
+}
+
+.xian1-exit-done {
+  opacity: 0;
+  transform: scale(0);
+}

@@ -1,0 +1,47 @@
+.bg5 {
+  height: 160vw;
+  width: 100vw;
+  background-image: url('../../assets/imgs/bg5.jpg');
+  background-size: 100vw 160vw;
+  background-repeat: no-repeat;
+  position: absolute;
+  .nsignin {
+    display: block;
+    font-size: 5vw;
+    width: 22vw;
+    height: 9vw;
+    background-image: url('../../assets/imgs/signin.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -1vw;
+    right: 0;
+    padding-top: 2.5vw;
+    padding-left: 1vw;
+    text-decoration: none;
+    color: #000;
+  }
+  .ui1 {
+    opacity: 0;
+    position: absolute;
+    transform: scale(0);
+    left: 25vw;
+    top: 25vw;
+    width: 25vw;
+  }
+}
+
+@keyframes flyback {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-20vw, 2.5vh) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-100vw, 5vh) scale(1);
+  }
+}

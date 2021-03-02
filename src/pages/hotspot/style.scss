@@ -1,0 +1,54 @@
+.bg11 {
+  height: 160vw;
+  width: 100vw;
+  background-image: url('../../assets/imgs/bg11.jpg');
+  background-size: 100vw 160vw;
+  position: absolute;
+  background-repeat: no-repeat;
+  .nsignin {
+    display: block;
+    font-size: 5vw;
+    width: 22vw;
+    height: 9vw;
+    background-image: url('../../assets/imgs/signin.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -1vw;
+    right: 0;
+    padding-top: 2.5vw;
+    padding-left: 1vw;
+    text-decoration: none;
+    color: #000;
+  }
+  .resou {
+    position: absolute;
+    width: 40vw;
+    top: 10vw;
+    right: 0;
+    transform: scale(0);
+    animation: resou 1s ease-in 1s forwards;
+  }
+  .title {
+    color: #630000;
+    position: absolute;
+    top: 18vw;
+    left: 16vw;
+    font-size: 6vw;
+  }
+}
+
+@keyframes resou {
+  0% {
+    opacity: 0;
+    transform: translate(-15vw, 40vh) scale(0) skewX(40deg) skewY(-60deg) rotate(60deg);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translate(-8vw, 10vh) scale(0.3) skewX(20deg) skewY(-60deg) rotate(50deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+}

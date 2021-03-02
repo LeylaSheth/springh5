@@ -1,0 +1,110 @@
+.bg13 {
+  height: 160vw;
+  width: 100vw;
+  background-image: url('../../assets/imgs/bg13.jpg');
+  background-size: 100vw 160vw;
+  background-repeat: no-repeat;
+  position: absolute;
+  .nsignin {
+    display: block;
+    font-size: 5vw;
+    width: 22vw;
+    height: 9vw;
+    background-image: url('../../assets/imgs/signin.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -1vw;
+    right: 0;
+    padding-top: 2.5vw;
+    padding-left: 1vw;
+    text-decoration: none;
+    color: #000;
+  }
+  .iknow1 {
+    position: absolute;
+    transform: rotate(2deg);
+    top: 5vw;
+    left: 2vw;
+    width: 40vw;
+    height: 70vw;
+    overflow: hidden;
+  }
+  .iknow2 {
+    position: absolute;
+    transform: rotate(5deg);
+    top: 10vw;
+    left: 30vw;
+    width: 50vw;
+    overflow: hidden;
+  }
+  .iknow3 {
+    position: absolute;
+    transform: rotate(2deg);
+    right: 0;
+    top: 35vw;
+    width: 40vw;
+    overflow: hidden;
+  }
+}
+
+@keyframes iknow {
+  0% {
+    opacity: 0;
+    transform: translate(0, 60vh) rotate(2deg) scale(0);
+  }
+  30%,
+  70% {
+    opacity: 0.6;
+    transform: translate(0, 15vh) rotate(362deg) scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(722deg) scale(1);
+  }
+}
+
+@for $i from 0 through 2 {
+  .iknow#{$i}-enter {
+    opacity: 0.01;
+    transform: translate(20vw, 60vw) scale(0);
+  }
+  .iknow#{$i}-enter-active {
+    opacity: 0.5;
+    transition: all 500ms linear;
+  }
+  .iknow#{$i}-enter-done {
+    opacity: 1;
+    transition: all 500ms linear;
+  }
+  .iknow#{$i}-exit-active {
+    opacity: 0;
+    transition: all 500ms ease-in;
+  }
+  .iknow#{$i}-exit-done {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+// .iknow0-enter-active {
+//   transform: translate(30vw, 35vw) scale(0.5);
+// }
+// .iknow0-enter-done,
+// .iknow0-exit {
+//   transform: translate(40vw, 10vw) scale(1);
+// }
+// .iknow1-enter-active {
+//   transform: translate(10vw, 39vw) scale(0.4);
+// }
+// .iknow1-enter-done,
+// .iknow1-exit {
+//   transform: translate(0vw, 18vw) scale(0.8);
+// }
+// .iknow2-enter-active {
+//   transform: translate(8vw, 31vw) scale(0.45, 0.4);
+// }
+// .iknow2-enter-done,
+// .iknow2-exit {
+//   transform: translate(-4vw, 2vw) scale(0.9, 0.8);
+// }

@@ -1,0 +1,181 @@
+.bg3 {
+  height: 160vw;
+  width: 100vw;
+  background-image: url('../../assets/imgs/bg3.jpg');
+  background-size: 100vw 160vw;
+  background-repeat: no-repeat;
+  position: absolute;
+  .nsignin {
+    display: block;
+    font-size: 5vw;
+    width: 22vw;
+    height: 9vw;
+    background-image: url('../../assets/imgs/signin.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -1vw;
+    right: 0;
+    padding-top: 2.5vw;
+    padding-left: 1vw;
+    text-decoration: none;
+    color: #000;
+  }
+  .title {
+    position: absolute;
+    top: 55vw;
+    font-size: 6vw;
+    width: 100%;
+    text-align: center;
+    color: #630000;
+  }
+  .man {
+    transform: scale(0);
+    position: absolute;
+    bottom: 12vw;
+    right: 0;
+    width: 70vw;
+    animation: slide-in 500ms ease-in 1s forwards;
+  }
+  .idea {
+    width: 20vw;
+    height: 30vw;
+    position: absolute;
+    background-image: url('../../assets/imgs/idea.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    animation: fly2 2s ease-in forwards;
+  }
+  .idea1 {
+    width: 12vw;
+    height: 17vw;
+    left: 15vw;
+    background-image: url('../../assets/imgs/idea.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+  .biao {
+    position: absolute;
+    width: 100%;
+  }
+  .rili {
+    position: absolute;
+    top: -4vw;
+    right: 12vw;
+    width: 75vw;
+  }
+  .chan {
+    opacity: 0;
+    position: absolute;
+    font-size: 10vw;
+    top: 4vw;
+    left: 30vw;
+    transform: scale(0);
+    animation: chan 1s ease-in 1s forwards;
+  }
+}
+
+@keyframes chan {
+  0% {
+    opacity: 0;
+    transform: translateY(10vw) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0vw) scale(1);
+  }
+}
+
+@keyframes fly2 {
+  0% {
+    transform: translate(-30vw, 65vw);
+  }
+  25%,
+  50%,
+  75% {
+    transform: translate(30vw, 65vw) scale(0.8);
+  }
+  100% {
+    transform: translate(2vw, 95vw) scale(0);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0.2;
+    transform: translate(50%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.fly-enter {
+  opacity: 0;
+  transform: translate(-36vw, 60vh) scale(0) skewX(40deg) skewY(-60deg) rotate(60deg);
+}
+
+.fly-enter-active {
+  opacity: 0.7;
+  transform: translate(-18vw, 30vh) scale(0.5) skewX(20deg) skewY(-60deg) rotate(50deg);
+  transition: all 200ms linear;
+}
+
+.fly-enter-done {
+  opacity: 1;
+  transform: translate(0, 4vh) scale(1);
+  transition: all 200ms linear;
+}
+
+.fly-exit {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+  transition: all 200ms linear;
+}
+
+.fly-exit-active {
+  opacity: 0.5;
+  transform: translateY(9vh) scale(0.5);
+  transition: all 200ms linear;
+}
+
+.fly-exit-done {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.flyidea-enter {
+  opacity: 0;
+  transform: translate(-10vw, 120vw) scale(0);
+}
+
+.flyidea-enter-active {
+  opacity: 0.7;
+  transform: translate(-5vw, 65vw) scale(0.5);
+  transition: all 200ms linear;
+}
+
+.flyidea-enter-done {
+  opacity: 1;
+  transform: translate(2vw, 8vw) scale(0.8);
+  transition: all 200ms linear;
+}
+
+.flyidea-exit {
+  opacity: 1;
+  transform: translate(2vw, 8vw) scale(0.8);
+  transition: all 200ms linear;
+}
+
+.flyidea-exit-active {
+  opacity: 0.5;
+  transform: translate(100vw, 8vw) scale(1);
+  transition: all 200ms linear;
+}
+
+.flyidea-exit-done {
+  opacity: 0;
+  transform: scale(0);
+}

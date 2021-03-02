@@ -1,0 +1,153 @@
+.bg10 {
+  height: 160vw;
+  width: 100vw;
+  background-color: rgb(248, 231, 209);
+  background-size: 100vw 160vw;
+  background-repeat: no-repeat;
+  color: #630000;
+  position: absolute;
+  .nsignin {
+    display: block;
+    font-size: 5vw;
+    width: 22vw;
+    height: 9vw;
+    background-image: url('../../assets/imgs/signin.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -1vw;
+    right: 0;
+    padding-top: 2.5vw;
+    padding-left: 1vw;
+    text-decoration: none;
+    color: #000;
+  }
+  .them {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 5vw;
+    width: 90vw;
+  }
+  .logo {
+    position: absolute;
+    width: 20vw;
+    animation: logofly 2000ms linear 1s forwards;
+  }
+  .yonghu {
+    position: absolute;
+    top: 20vw;
+    left: 5vw;
+    width: 90vw;
+  }
+  .title {
+    position: absolute;
+    top: 8vw;
+    width: 100vw;
+    font-size: 10vw;
+    text-align: center;
+  }
+  .comment {
+    position: absolute;
+    font-size: 10vw;
+  }
+}
+
+@keyframes logofly {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(0.8);
+  }
+  30%,
+  70% {
+    opacity: 0.8;
+    transform: translate(45vw, 20vh) scale(1.5);
+  }
+  100% {
+    opacity: 0.1;
+    transform: translate(35vw, 65vh) scale(0);
+  }
+}
+
+.yonghu-enter {
+  opacity: 0.01;
+  transform: translate(0, -10vh) scale(0.3);
+}
+
+.yonghu-enter-active {
+  opacity: 0.5;
+  transform: translate(0, -5vh) scale(0.5);
+  transition: all 500ms linear;
+}
+
+.yonghu-enter-done {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+  transition: all 500ms linear;
+}
+
+.yonghu-exit {
+  opacity: 1;
+  transform: translate(50vw, 20vh) scale(1);
+}
+
+.yonghu-exit-active {
+  opacity: 0;
+  transform: translate(100vw, 20vh) scale(1);
+  transition: all 500ms ease-in;
+}
+
+.yonghu-exit-done {
+  opacity: 0;
+  transform: scale(0);
+}
+
+@for $i from 0 through 2 {
+  .comment#{$i}-enter {
+    opacity: 0.01;
+    transform: translate(35vw, 20vw) scale(0);
+  }
+  .comment#{$i}-enter-active {
+    opacity: 0.5;
+    transition: all 500ms linear;
+  }
+  .comment#{$i}-enter-done {
+    opacity: 1;
+    transition: all 500ms linear;
+  }
+  .comment#{$i}-exit-active {
+    opacity: 0;
+    transition: all 500ms ease-in;
+  }
+  .comment#{$i}-exit-done {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.comment0-enter-active {
+  transform: translate(70vw, 12vw) scale(1.2, 2);
+}
+
+.comment0-enter-done,
+.comment0-exit {
+  transform: translate(70vw, 12vw) scale(1);
+}
+
+.comment1-enter-active {
+  transform: translate(0vw, 12vw) scale(1.2, 2);
+}
+
+.comment1-enter-done,
+.comment1-exit {
+  transform: translate(0vw, 12vw) scale(1);
+}
+
+.comment2-enter-active {
+  transform: translate(35vw, 5vw) scale(1.2, 2);
+}
+
+.comment2-enter-done,
+.comment2-exit {
+  transform: translate(35vw, 5vw) scale(1);
+}

@@ -1,0 +1,286 @@
+.bg7 {
+  height: 160vw;
+  width: 100vw;
+  background-image: url('../../assets/imgs/bg7.jpg');
+  background-size: 100vw 160vw;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: absolute;
+  .nsignin {
+    display: block;
+    font-size: 5vw;
+    width: 22vw;
+    height: 9vw;
+    background-image: url('../../assets/imgs/signin.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -1vw;
+    right: 0;
+    padding-top: 2.5vw;
+    padding-left: 1vw;
+    text-decoration: none;
+    color: #000;
+  }
+  .clock1 {
+    position: absolute;
+    top: 7vw;
+    left: 7vw;
+    width: 35vw;
+    height: 35vw;
+    background-image: url('../../assets/imgs/clock1.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .ui2 {
+    position: absolute;
+    width: 25vw;
+    animation: uishow2 1000ms linear forwards;
+  }
+  .han {
+    position: absolute;
+    bottom: 42vw;
+    left: 15vw;
+    width: 25vw;
+    animation: say 250ms linear infinite;
+  }
+  .xuqiu {
+    position: absolute;
+    // right: 10vw;
+    // bottom: 15vh;
+    width: 30vw;
+  }
+  .xuqiu1 {
+    position: absolute;
+    right: 7vw;
+    bottom: 20vw;
+    width: 30vw;
+  }
+  .title {
+    color: $text;
+    left: 6vw;
+    top: 50vw;
+    position: absolute;
+    font-size: 6vw;
+  }
+  .man {
+    position: absolute;
+    // right: 0;
+    // top: 30vh;
+    width: 45vw;
+  }
+  .conver {
+    position: absolute;
+    color: $text;
+    font-size: 6.5vw;
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+    background-image: url('../../assets/imgs/clock1.png');
+  }
+  50% {
+    transform: rotate(180deg);
+    background-image: url('../../assets/imgs/clock2.png');
+  }
+  100% {
+    transform: rotate(360deg);
+    background-image: url('../../assets/imgs/clock1.png');
+  }
+}
+
+@keyframes uishow2 {
+  0% {
+    opacity: 1;
+    transform: translate(-25vw, 40vw) scale(1);
+  }
+  30%,
+  70% {
+    opacity: 0.8;
+    transform: translate(15vw, 50vw) skew(20deg, -20deg) rotate(45deg) scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(20vw, 90vw) scale(0.5);
+  }
+}
+
+.man-enter {
+  opacity: 0.01;
+  transform: translate(100vw, 42vw) scale(0);
+}
+
+.man-enter-active {
+  opacity: 0.5;
+  transform: translate(75vw, 42vw) scale(1);
+  transition: all 500ms linear;
+}
+
+.man-enter-done {
+  opacity: 1;
+  transform: translate(55vw, 42vw) scale(1);
+  transition: all 500ms linear;
+}
+
+.man-exit {
+  opacity: 1;
+  transform: translate(55vw, 42vw) scale(1);
+}
+
+.man-exit-active {
+  opacity: 0.5;
+  transform: translate(100vw, 42vw) scale(0);
+  transition: all 500ms ease-in;
+}
+
+.man-exit-done {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.xuqiu-enter {
+  opacity: 0.01;
+  transform: translate(65vw, 120vw) scale(0);
+}
+
+.xuqiu-enter-active {
+  opacity: 0.5;
+  transform: translate(65vw, 120vw) scale(0.5);
+  transition: all 500ms linear;
+}
+
+.xuqiu-enter-done {
+  opacity: 1;
+  transform: translate(65vw, 120vw) scale(1);
+  transition: all 500ms linear;
+}
+
+.xuqiu-exit {
+  opacity: 1;
+  transform: translate(65vw, 120vw) scale(1);
+}
+
+.xuqiu-exit-active {
+  opacity: 0;
+  transform: translate(100vw, 120vw) scale(1);
+  transition: all 500ms ease-in;
+}
+
+.xuqiu-exit-done {
+  opacity: 0;
+  transform: scale(0);
+}
+
+@for $i from 0 through 2 {
+  .conver#{$i}-enter {
+    opacity: 0.01;
+    transform: translate(47vw, 40vw) scale(0);
+  }
+  .conver#{$i}-enter-active {
+    opacity: 0.5;
+    transition: all 500ms linear;
+  }
+  .conver#{$i}-enter-done {
+    opacity: 1;
+    transition: all 500ms linear;
+  }
+  .conver#{$i}-exit-active {
+    opacity: 0;
+    transition: all 500ms ease-in;
+  }
+  .conver#{$i}-exit-done {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.conver0-enter-active {
+  transform: translate(47vw, 25vw) scale(0.5);
+}
+
+.conver0-enter-done,
+.conver0-exit {
+  transform: translate(47vw, 10vw) scale(1);
+}
+
+.conver1-enter-active {
+  transform: translate(47vw, 30vw) scale(0.5);
+}
+
+.conver1-enter-done,
+.conver1-exit {
+  transform: translate(47vw, 20vw) scale(1);
+}
+
+.conver2-enter-active {
+  transform: translate(47vw, 35vw) scale(0.45, 0.4);
+}
+
+.conver2-enter-done,
+.conver2-exit {
+  transform: translate(47vw, 30vw) scale(1);
+}
+
+.conver3-enter {
+  opacity: 0.01;
+  transform: translate(4vw, 100vw) scale(0);
+}
+
+.conver3-enter-active {
+  opacity: 0.5;
+  transform: translate(4vw, 85vw) scale(0.5);
+  transition: all 500ms linear;
+}
+
+.conver3-enter-done {
+  opacity: 1;
+  transform: translate(4vw, 70vw) scale(1);
+  transition: all 500ms linear;
+}
+
+.conver3-exit {
+  transform: translate(4vw, 80vw) scale(1);
+}
+
+.conver3-exit-active {
+  opacity: 0;
+  transition: all 500ms ease-in;
+}
+
+.conver3-exit-done {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.title-enter {
+  opacity: 0.01;
+  transform: scale(0);
+}
+
+.title-enter-active {
+  opacity: 0.5;
+  transform: scale(1.5);
+  transition: all 500ms linear;
+}
+
+.title-enter-done {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 500ms linear;
+}
+
+.title-exit {
+  transform: scale(1);
+}
+
+.title-exit-active {
+  opacity: 0.5;
+  transition: all 500ms ease-in;
+}
+
+.title-exit-done {
+  opacity: 0;
+  transform: scale(0);
+}

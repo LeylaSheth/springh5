@@ -1,0 +1,124 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgb(248, 231, 209);
+  display: flex;
+  align-items: center;
+  .stop {
+    color: rgb(94, 86, 86);
+    opacity: 0.4;
+    font-size: 4vw;
+    text-align: center;
+    width: 100vw;
+    position: absolute;
+    bottom: 4vw;
+  }
+  .next {
+    opacity: 0.5;
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    top: 45%;
+    right: 0;
+    background-image: url('./assets/imgs/next.png');
+    background-size: 100%;
+  }
+  .start {
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-decoration: none;
+    color: #333;
+    opacity: 0.35;
+    position: absolute;
+    left: 42%;
+    bottom: 8vw;
+    z-index: 5;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    border: rgba(191, 191, 191, 0.5) 1.5vw solid;
+    box-shadow: 0px 1px 3px 1px rgba(191, 191, 191, 0.5);
+    display: block;
+    animation: tishi 5s ease-in-out infinite;
+  }
+  .code {
+    width: 50vw;
+    height: 50vh;
+    left: 25vw;
+    top: 20vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    color: #630000;
+    font-size: 35px;
+  }
+}
+
+.thebox {
+  width: 100vw;
+  height: 160vw;
+  overflow: hidden;
+  position: relative;
+  .playing {
+    position: absolute;
+    z-index: 10;
+    left: 2vw;
+    top: 0;
+    width: 9vw;
+    height: 9vw;
+    background-image: url('./assets/imgs/music.png');
+    background-size: 100%;
+    animation: playing 2s linear infinite;
+  }
+  .paused {
+    position: absolute;
+    z-index: 10;
+    left: 2vw;
+    top: 0;
+    width: 9vw;
+    height: 9vw;
+    background-image: url('./assets/imgs/pause.png');
+    background-size: 100%;
+  }
+}
+
+@keyframes playing {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes stop {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes next {
+  0% {
+    opacity: 0.2;
+    transform: translateX(-5px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0.1;
+    transform: translateX(5px);
+  }
+}

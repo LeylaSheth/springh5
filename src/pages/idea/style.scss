@@ -1,0 +1,141 @@
+.idea-page {
+  @include bg('../assets/imgs/bg1.png');
+  .thoughts {
+    display: table;
+    text-align: center;
+    position: absolute;
+    width: 60vw;
+    height: 35vw;
+    color: $text;
+    background-image: url('../../assets/imgs/thoughts.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    span {
+      font-size: 1.5rem;
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  .idea {
+    width: 20vw;
+    height: 30vw;
+    position: absolute;
+    background-image: url('../../assets/imgs/idea.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    // animation: action_translate 1s linear 0.5s;
+    // animation-fill-mode: forwards;
+  }
+  .tishi {
+    display: table;
+    position: absolute;
+    top: 30vw;
+    left: 15vw;
+    text-align: center;
+    width: 70vw;
+    height: 30vw;
+    background-color: white;
+    opacity: 0.5;
+    border-radius: 5vw;
+    animation: tishi 1s linear infinite;
+    span {
+      font-size: 7vw;
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+
+@for $i from 0 through 3 {
+  .show#{$i}-enter {
+    opacity: 0.01;
+    @include simple-transition(5rem,
+    14rem,
+    0);
+  }
+  .show#{$i}-enter-active {
+    opacity: 0.5;
+    transition: all 500ms linear;
+  }
+  .show#{$i}-enter-done {
+    opacity: 1;
+    transition: all 500ms linear;
+  }
+  .show#{$i}-exit-active {
+    opacity: 0;
+    transition: all 500ms ease-in;
+  }
+  .show#{$i}-exit-done {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.show0-enter-active {
+  transform: translate(7rem, 8rem) scale(0.5);
+}
+
+.show0-enter-done,
+.show0-exit {
+  transform: translate(9.5rem, 2rem) scale(1);
+}
+
+.show1-enter-active {
+  transform: translate(2.5rem, 9rem) scale(0.4);
+}
+
+.show1-enter-done,
+.show1-exit {
+  transform: translate(0rem, 4rem) scale(0.8);
+}
+
+.show2-enter-active {
+  transform: translate(2rem, 7.5rem) scale(0.45, 0.4);
+}
+
+.show2-enter-done,
+.show2-exit {
+  transform: translate(-1rem, 0.5rem) scale(0.9, 0.8);
+}
+
+.show3-enter-active {
+  transform: translate(6rem, 10rem) scale(0.45, 0.35);
+}
+
+.show3-enter-done,
+.show3-exit {
+  transform: translate(7.5rem, 5.5rem) scale(0.8, 0.7);
+}
+
+.idea-enter {
+  opacity: 0.01;
+  transform: translate(10rem, 12rem) scale(0);
+}
+
+.idea-enter-active {
+  opacity: 0.5;
+  transform: translate(12rem, 9rem) scale(0.5);
+  transition: all 500ms linear;
+}
+
+.idea-enter-done {
+  opacity: 1;
+  transform: translate(14rem, 6rem) scale(1);
+  transition: all 500ms linear;
+}
+
+.idea-exit {
+  opacity: 1;
+  transform: translate(60vw, 30vw) scale(1);
+}
+
+.idea-exit-active {
+  opacity: 0;
+  transform: translate(100vw, 30vw) scale(1);
+  transition: all 500ms ease-in;
+}
+
+.idea-exit-done {
+  opacity: 0;
+  transform: scale(0);
+}
