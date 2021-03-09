@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useEffect, useState } from 'react';
+import React, { FC, useCallback, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import say from '../../assets/imgs/say.png';
 import { CSSTransition } from 'react-transition-group';

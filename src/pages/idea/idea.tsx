@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useEffect, useState } from 'react';
+import React, { FC, useCallback, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import Next from '../../components/next';
@@ -30,7 +30,7 @@ const Idea: FC<IdeaProps> = (props) => {
       setTimeout(() => {
         setShowTexts((showTexts) => [...showTexts, text]);
         if (i === texts.length - 1) {
-          setFlag(flag + 1);
+          cloudTimers.push(setTimeout(() => setFlag(flag + 1), ms));
         }
       }, i * ms)
     );
@@ -38,17 +38,19 @@ const Idea: FC<IdeaProps> = (props) => {
   };
 
   const handleIdeaEnter = useCallback(() => {
-    let delay = 0;
+    let delay = 1;
     const cloudExitTimer = setTimeout(() => {
       setShowTexts([]);
     }, ++delay * ms);
 
     const ideaEnterTimer = setTimeout(() => {
       setIdea(true);
-      setFlag((flag) => flag + 1);
     }, ++delay * ms);
 
-    return [cloudExitTimer, ideaEnterTimer];
+    const flagTimer = setTimeout(() => {
+      setFlag((flag) => flag + 1);
+    }, ++delay * ms);
+    return [cloudExitTimer, ideaEnterTimer, flagTimer];
   }, []);
 
   const handleIdeaExit = useCallback(() => {
